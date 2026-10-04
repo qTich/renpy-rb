@@ -144,7 +144,17 @@ def create_project(interface, dest, name=None, version="1.0"):
         "UISupportedInterfaceOrientations": [
             "UIInterfaceOrientationLandscapeRight",
             "UIInterfaceOrientationLandscapeLeft",
-        ],
+        ], "UIApplicationSceneManifest": {
+            "UIApplicationSupportsMultipleScenes": False,
+            "UISceneConfigurations": {
+                "UIWindowSceneSessionRoleApplication": [
+                    {
+                        "UISceneConfigurationName": "SDLSceneConfiguration",
+                        "UISceneDelegateClassName": "SDLUIKitSceneDelegate",
+                    },
+                ],
+            }
+        }
     }
 
     plist_fn = os.path.join(dest, "Info.plist")
